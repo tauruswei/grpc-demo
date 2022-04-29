@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package lightweight;
+
+option go_package = "/lightweight";
+
+
+service Gym {
+  rpc BodyBuilding (Person) returns (Reply){
+
+  }
+  rpc BodyBuilding1 (Person) returns (Reply){
+
+  }
+}
+
+message Person{
+  string name = 1;
+  repeated string actions = 2;
+}
+
+message Reply {
+  int32 code = 1;
+  string msg = 2;
+}
